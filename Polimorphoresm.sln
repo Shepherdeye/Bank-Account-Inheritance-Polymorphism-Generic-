@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polimorphoresm", "Polimorphoresm\Polimorphoresm.csproj", "{CD559BB6-FBC5-4FBA-8BEC-0F42EF020DFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD559BB6-FBC5-4FBA-8BEC-0F42EF020DFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD559BB6-FBC5-4FBA-8BEC-0F42EF020DFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD559BB6-FBC5-4FBA-8BEC-0F42EF020DFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD559BB6-FBC5-4FBA-8BEC-0F42EF020DFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9ADC3263-2420-4F15-818C-CD6814071F71}
+	EndGlobalSection
+EndGlobal
