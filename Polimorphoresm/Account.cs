@@ -17,7 +17,7 @@ namespace Polimorphoresm
             this.Balance = balance;
         }
 
-        public bool Deposit(double amount)
+       virtual public bool Deposit(double amount)
         {
             if (amount < 0)
                 return false;

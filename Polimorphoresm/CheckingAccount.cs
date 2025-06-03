@@ -15,6 +15,10 @@ namespace Polimorphoresm
 
         public double Fee { get; set; }
 
+        public override string ToString()
+        {
+            return $"Name:{Name} Balance :{Balance} IntRate: {Fee}";
+        }
 
         override public bool Withdraw(double amount)
         {
