@@ -29,22 +29,6 @@
          return false;
  }
 
-static void Main(){
-
-
-    List<int> numbers = new List<int> { 1, 2,2, 3, 4 };
-
-    bool duplication = IsDuplicate(numbers);
-
-
-    if (duplication)
-    {
-        Console.WriteLine("No Duplication");
-    }
-    else
-    {
-        Console.WriteLine("there is Duplication");
-    }
 // Check  if  have vowels
 
      public static bool HaveVowels(string text = "")
@@ -62,13 +46,30 @@ static void Main(){
 
          return contain;
      }
+static void Main(){
 
-            bool have = HaveVowels("RSD");
+    List<int> numbers = new List<int> { 1, 2, 2, 3, 4 };
 
-            if (have)
-            
-               Console.WriteLine("Contain Vowels ");
-            else
-               Console.WriteLine("Don't Contain ");
+    bool duplication = IsDuplicate(numbers);
+
+
+    if (duplication)
+    
+        Console.WriteLine("No Duplication");
+    
+    else
+    
+        Console.WriteLine("there is Duplication");
+    
+
+    bool have = HaveVowels("RSD");
+
+    if (have)
+
+        Console.WriteLine("Contain Vowels ");
+    else
+        Console.WriteLine("Don't Contain ");
+    
+          }
 
 }
