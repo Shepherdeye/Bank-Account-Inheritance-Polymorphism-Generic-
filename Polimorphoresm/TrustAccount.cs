@@ -37,9 +37,9 @@ namespace Polimorphoresm
 
             if (amount > Balance * 0.20)
             {
+                Console.WriteLine($" Over than 20% From {Name}");
                 return false;
             }
-
 
             if (CurrentYear > ACCYear)
             {
@@ -49,21 +49,19 @@ namespace Polimorphoresm
 
             if (OperationCounts == 3)
             {
+                Console.WriteLine(" Failed , More  than 3 times).");
                 return false;
             }
 
             if (base.Withdraw(amount))
             {
-
-
                 OperationCounts++;
+                Console.WriteLine($" Done  and  you have Make : {OperationCounts} times");
                 return true;
             }
+
             return false;
-           
-
         }
-
 
         public override string ToString()
         {

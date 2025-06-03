@@ -44,9 +44,16 @@
 
             AccountUtil<TrustAccount>.Deposit(trustAccounts, 1000);
             AccountUtil<TrustAccount>.Deposit(trustAccounts, 6000);
+
             AccountUtil<TrustAccount>.Withdraw(trustAccounts, 2000);
             AccountUtil<TrustAccount>.Withdraw(trustAccounts, 3000);
             AccountUtil<TrustAccount>.Withdraw(trustAccounts, 500);
+
+
+            AccountUtil<TrustAccount>.Withdraw(trustAccounts, 1);
+            AccountUtil<TrustAccount>.Withdraw(trustAccounts, 1);
+            AccountUtil<TrustAccount>.Withdraw(trustAccounts, 1);
+
 
             Console.WriteLine();
         }
