@@ -4,30 +4,26 @@
 
 // Duplication Method
 
- public static bool IsDuplicate(List<int> numbers)
- {
+    public static bool IsDuplicate(List<int> numbers)
+   {
+       bool Duplication = false;
 
-     bool noDuplication = true;
-     if (numbers.Count != 0)
-     {
-         for (int i = 0; i < numbers.Count; i++)
-         {
-            for(int j = i+1; j < numbers.Count; j++)
-             {
-                 if(numbers[i] == numbers[j])
-                 {
-                     noDuplication = false;
-                     break;
-                 }
-             }
-         }
+       for (int i = 0; i < numbers.Count; i++)
+       {
+           for (int j = i + 1; j < numbers.Count; j++)
+           {
+               if (numbers[i] == numbers[j])
+               {
+                   Duplication = true;
+                   break;
+               }
+           }
+       }
 
-         return noDuplication;
+       return Duplication;
 
-     }
-     else
-         return false;
- }
+
+   }
 
 // Check  if  have vowels
 
@@ -54,12 +50,10 @@ static void Main(){
 
 
     if (duplication)
-    
-        Console.WriteLine("No Duplication");
-    
+    Console.WriteLine("there is Duplication");
     else
-    
-        Console.WriteLine("there is Duplication");
+    Console.WriteLine("No Duplication");
+        
     
 
     bool have = HaveVowels("RSD");

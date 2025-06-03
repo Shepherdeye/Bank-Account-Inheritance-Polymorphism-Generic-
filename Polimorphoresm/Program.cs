@@ -2,24 +2,7 @@
 {
     internal class Program
     {
-
-        public static bool HaveVowels(string text = "")
-        {
-            List<string> vowels = new List<string> { "a", "e", "i", "o", "u" };
-            bool contain=false;
-            for (int i = 0; i < vowels.Count; i++)
-            {
-                if (text.ToLower().Contains(vowels[i]))
-                {
-                    contain= true;
-                    break;
-                }
-            }
-
-            return contain;
-        }
-
-
+     
         static void Main()
         {
             // Accounts
@@ -75,13 +58,7 @@
 
             Console.WriteLine();
 
-            bool have = HaveVowels("RSD");
-
-            if (have)
-            
-               Console.WriteLine("Contain Vowels ");
-            else
-               Console.WriteLine("Don't Contain ");
+         
 
         }
     }

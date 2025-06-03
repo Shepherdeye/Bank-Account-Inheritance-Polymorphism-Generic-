@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Polimorphoresm
 {
-    public class CheckingAccount : Account
+ 
+public class CheckingAccount : Account
     {
         public CheckingAccount(string name = "Unnamed Account", double balance = 0.0, double fee = 1.50) : base(name, balance)
         {
