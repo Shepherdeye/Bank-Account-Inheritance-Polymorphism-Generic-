@@ -1,69 +1,91 @@
-<h2> Search Task </h2>
+using System;
+using System.Collections.Generic;
 
-<br>
-
-// Duplication Method
-
+class Program
+{
+    // Duplication Method with exception handling
     public static bool IsDuplicate(List<int> numbers)
-   {
-       bool Duplication = false;
+    {
+        try
+        {
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                for (int j = i + 1; j < numbers.Count; j++)
+                {
+                    if (numbers[i] == numbers[j])
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        catch (NullReferenceException)
+        {
+            Console.WriteLine("Error: The numbers list is null.");
+            return false;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An unexpected error occurred in IsDuplicate: {ex.Message}");
+            return false;
+        }
+    }
 
-       for (int i = 0; i < numbers.Count; i++)
-       {
-           for (int j = i + 1; j < numbers.Count; j++)
-           {
-               if (numbers[i] == numbers[j])
-               {
-                   Duplication = true;
-                   break;
-               }
-           }
-       }
+    // Check if have vowels with exception handling
+    public static bool HaveVowels(string text = "")
+    {
+        try
+        {
+            List<string> vowels = new List<string> { "a", "e", "i", "o", "u" };
+            
+            if (string.IsNullOrEmpty(text))
+                return false;
 
-       return Duplication;
+            for (int i = 0; i < vowels.Count; i++)
+            {
+                if (text.ToLower().Contains(vowels[i]))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        catch (NullReferenceException)
+        {
+            Console.WriteLine("Error: The text string is null.");
+            return false;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An unexpected error occurred in HaveVowels: {ex.Message}");
+            return false;
+        }
+    }
 
+    static void Main()
+    {
+        try
+        {
+            List<int> numbers = new List<int> { 1, 2, 2, 3, 4 };
 
-   }
+            bool duplication = IsDuplicate(numbers);
 
-// Check  if  have vowels
+            if (duplication)
+                Console.WriteLine("There is Duplication");
+            else
+                Console.WriteLine("No Duplication");
 
-     public static bool HaveVowels(string text = "")
-     {
-         List<string> vowels = new List<string> { "a", "e", "i", "o", "u" };
-         bool contain=false;
-         for (int i = 0; i < vowels.Count; i++)
-         {
-             if (text.ToLower().Contains(vowels[i]))
-             {
-                 contain= true;
-                 break;
-             }
-         }
+            bool have = HaveVowels("RSD");
 
-         return contain;
-     }
-static void Main(){
-
-    List<int> numbers = new List<int> { 1, 2, 2, 3, 4 };
-
-    bool duplication = IsDuplicate(numbers);
-
-
-    if (duplication)
-    Console.WriteLine("there is Duplication");
-    else
-    Console.WriteLine("No Duplication");
-        
-    
-
-    bool have = HaveVowels("RSD");
-
-    if (have)
-
-        Console.WriteLine("Contain Vowels ");
-    else
-        Console.WriteLine("Don't Contain ");
-    
-          }
-
+            if (have)
+                Console.WriteLine("Contains Vowels");
+            else
+                Console.WriteLine("Doesn't Contain Vowels");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred in Main: {ex.Message}");
+        }
+    }
 }
