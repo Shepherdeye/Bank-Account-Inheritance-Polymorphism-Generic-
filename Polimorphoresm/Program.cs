@@ -52,7 +52,7 @@
 
 
             AccountUtil<TrustAccount>.Withdraw(trustAccounts, 1);
-            AccountUtil<TrustAccount>.Withdraw(trustAccounts, 1);
+            AccountUtil<TrustAccount>.Withdraw(trustAccounts, 1); 
             AccountUtil<TrustAccount>.Withdraw(trustAccounts, 1);
 
 
