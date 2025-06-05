@@ -4,7 +4,7 @@
      public static bool IsDuplicate(List<int> nums)
      {
 
-         if (nums != null || nums.Count != 0)
+         if (nums != null && nums.Count != 0)
          {
              for (int i = 0; i < nums.Count; i++)
              {
